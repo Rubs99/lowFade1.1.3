@@ -21,7 +21,9 @@ regCtrl.register = async(req, res) => {
             name: body.name,
             email: body.email,
             password: bcrypt.hashSync(body.password, 10),
-            role: 'CLIENT_ROLE'
+            role: 'CLIENT_ROLE',
+            birthday: Date.now(),
+            premiumClient: false
         });
         const userSave = await user.save({});
         let token = await jwt.sign({

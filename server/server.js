@@ -48,7 +48,8 @@ app.use('/api/register', require('./routes/register.routes'));
 app.use('/api/service', require('./routes/service.routes'));
  //Appoiments
 app.use('/api/appoiment', require('./routes/appoiment.routes'));
-
+//Clients
+app.use('/api/client', require('./routes/client.routes'));
 app.use(express.static(path.join(__dirname, 'libs/public')));
 
 // Starting the server
